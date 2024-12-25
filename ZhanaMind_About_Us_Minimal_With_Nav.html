@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - ZhanaMind</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2B4B8C;
+            --secondary: #1CA4B8;
+            --accent: #34785B;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f8f8f8;
+        }
+        nav, footer {
+            background: var(--primary);
+            color: white;
+        }
+        nav a:hover, footer a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .about-section {
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .team-member {
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<nav class="py-4 px-8 fixed w-full top-0 shadow z-50 bg-primary text-white">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="logo flex items-center gap-4">
+            <svg width="40" height="40" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#2B4B8C"/>
+                        <stop offset="100%" stop-color="#1CA4B8"/>
+                    </linearGradient>
+                </defs>
+                <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="logo-text font-bold text-lg">ZhanaMind</span>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="index.html" class="hover:underline">Главная</a>
+            <a href="about-us.html" class="hover:underline">О нас</a>
+            <a href="courses.html" class="hover:underline">Курсы</a>
+            <a href="faq.html" class="hover:underline">FAQ</a>
+            <a href="contacts.html" class="hover:underline">Контакты</a>
+            <a href="subscription.html" class="hover:underline">Подписка</a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Навигация -->
+    <nav class="py-4 px-8 fixed w-full top-0 shadow z-50">
+        <div class="flex justify-between items-center container mx-auto">
+            <div class="logo flex items-center gap-4">
+                <svg width="40" height="40" viewBox="0 0 200 200">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2B4B8C"/>
+                            <stop offset="100%" stop-color="#1CA4B8"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                    <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+                </svg>
+                <span class="logo-text">ZhanaMind</span>
+            </div>
+            <div class="space-x-4">
+                <a href="/" class="hover:underline">Главная</a>
+                <a href="#history" class="hover:underline">История</a>
+                <a href="#team" class="hover:underline">Команда</a>
+                <a href="#mission" class="hover:underline">Миссия</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1 class="text-4xl font-bold mb-4">О нас</h1>
+        <p class="text-xl">Познакомьтесь с нашей историей, командой и миссией.</p>
+    </header>
+    <main class="container mx-auto py-8">
+        <!-- История проекта -->
+        <section id="history" class="fade-in about-section">
+            <h2 class="section-title">История проекта</h2>
+            <p>ZhanaMind родился из стремления объединить нейронауку и психологию для создания трансформационных практик, которые помогают людям достигать осознанности, улучшать эмоциональное состояние и добиваться своих целей.</p>
+        </section>
+        <!-- Команда -->
+        <section id="team" class="fade-in about-section">
+            <h2 class="section-title">Наша команда</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Team Member">
+                    <h3>Жанна А.</h3>
+                    <p>Основатель и эксперт по нейронауке</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Team Member">
+                    <h3>Игорь Б.</h3>
+                    <p>Психолог-консультант</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Team Member">
+                    <h3>Екатерина В.</h3>
+                    <p>Тренер по осознанности</p>
+                </div>
+            </div>
+        </section>
+        <!-- Миссия и ценности -->
+        <section id="mission" class="fade-in about-section">
+            <h2 class="section-title">Наша миссия</h2>
+            <p>Мы стремимся создать сообщество, которое вдохновляет на перемены и помогает людям стать лучшей версией самих себя, используя знания о мозге и психологию. Наша ценность – это внимание к каждому человеку, инновационные подходы и искренность в работе.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 ZhanaMind. Все права защищены.</p>
+    </footer>
+</body>
+</html>

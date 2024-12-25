@@ -1,0 +1,1249 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhanaMind - Трансформация жизни</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2B4B8C;
+            --secondary: #1CA4B8;
+            --accent: #34785B;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        nav, footer {
+            background: var(--primary);
+            color: white;
+        }
+        nav a:hover, footer a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        section {
+            padding: 60px 20px;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: scale(1.1);
+        }
+        .logo svg {
+            width: 40px;
+            height: 40px;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .faq-item h3:hover {
+            color: var(--secondary);
+        }
+        .faq-item p {
+            display: none;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+        .faq-item.active p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<nav class="py-4 px-8 fixed w-full top-0 shadow z-50 bg-primary text-white">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="logo flex items-center gap-4">
+            <svg width="40" height="40" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#2B4B8C"/>
+                        <stop offset="100%" stop-color="#1CA4B8"/>
+                    </linearGradient>
+                </defs>
+                <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="logo-text font-bold text-lg">ZhanaMind</span>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="index.html" class="hover:underline">Главная</a>
+            <a href="about-us.html" class="hover:underline">О нас</a>
+            <a href="courses.html" class="hover:underline">Курсы</a>
+            <a href="faq.html" class="hover:underline">FAQ</a>
+            <a href="contacts.html" class="hover:underline">Контакты</a>
+            <a href="subscription.html" class="hover:underline">Подписка</a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Навигация -->
+    <nav class="py-4 px-8 fixed w-full top-0 shadow z-50 fade-in">
+        <div class="flex justify-between items-center container mx-auto">
+            <div class="logo flex items-center gap-4">
+                <svg width="40" height="40" viewBox="0 0 200 200">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2B4B8C"/>
+                            <stop offset="100%" stop-color="#1CA4B8"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                    <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+                </svg>
+                <span class="logo-text">ZhanaMind</span>
+            </div>
+            <div class="space-x-4">
+                <a href="#programs" class="hover:underline">Программы</a>
+                <a href="#features" class="hover:underline">Преимущества</a>
+                <a href="#testimonials" class="hover:underline">Отзывы</a>
+                <a href="#faq" class="hover:underline">FAQ</a>
+                <a href="#footer" class="hover:underline">Контакты</a>
+            </div>
+        </div>
+    </nav>
+    <header id="about" class="fade-in">
+        <h1 class="text-5xl font-bold mb-4">Трансформация начинается здесь</h1>
+        <p class="text-xl max-w-3xl mx-auto">Методики на основе нейронауки и психологии помогут изменить вашу жизнь.</p>
+        <div class="mt-6">
+            <a href="#programs" class="btn-primary">Узнать больше</a>
+        </div>
+    </header>
+    <main class="container mx-auto">
+        <!-- Программы -->
+        <section id="programs" class="fade-in programs-section">
+            <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhanaMind - Программы</title>
+    <style>
+        .programs-section {
+            background-color: #F8F9FA;
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            color: #2B4B8C;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(43, 75, 140, 0.1);
+        }
+
+        .program-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2B4B8C, #1CA4B8);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .program-icon svg {
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+
+        .program-title {
+            color: #2B4B8C;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .program-duration {
+            color: #1CA4B8;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .program-description {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .program-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #666;
+        }
+
+        .feature-dot {
+            width: 6px;
+            height: 6px;
+            background: #1CA4B8;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .program-button {
+            width: 100%;
+            padding: 14px;
+            background: #2B4B8C;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .program-button:hover {
+            background: #1CA4B8;
+        }
+
+        @media (max-width: 1024px) {
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="py-4 px-8 fixed w-full top-0 shadow z-50 bg-primary text-white">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="logo flex items-center gap-4">
+            <svg width="40" height="40" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#2B4B8C"/>
+                        <stop offset="100%" stop-color="#1CA4B8"/>
+                    </linearGradient>
+                </defs>
+                <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="logo-text font-bold text-lg">ZhanaMind</span>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="index.html" class="hover:underline">Главная</a>
+            <a href="about-us.html" class="hover:underline">О нас</a>
+            <a href="courses.html" class="hover:underline">Курсы</a>
+            <a href="faq.html" class="hover:underline">FAQ</a>
+            <a href="contacts.html" class="hover:underline">Контакты</a>
+            <a href="subscription.html" class="hover:underline">Подписка</a>
+        </div>
+    </div>
+</nav>
+
+    <section class="programs-section">
+        <div class="section-title">
+            <h2>Наши программы</h2>
+            <p>Выберите подходящий путь для вашей трансформации</p>
+        </div>
+
+        <div class="programs-grid">
+            <!-- Программа 1 -->
+            <div class="program-card">
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="program-title">Быстрый старт</h3>
+                <div class="program-duration">7 дней</div>
+                <p class="program-description">
+                    Начните свой путь к осознанной жизни с базовой программы
+                </p>
+                <ul class="program-features">
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        5 медитаций
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        Дневник благодарности
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        Чек-листы
+                    </li>
+                </ul>
+                <button class="program-button">Начать программу</button>
+            </div>
+
+            <!-- Программа 2 -->
+            <div class="program-card">
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="program-title">Уверенный рост</h3>
+                <div class="program-duration">21 день</div>
+                <p class="program-description">
+                    Формируйте новые привычки и укрепляйте практику
+                </p>
+                <ul class="program-features">
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        15 практик
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        Групповые занятия
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        Поддержка куратора
+                    </li>
+                </ul>
+                <button class="program-button">Начать программу</button>
+            </div>
+
+            <!-- Программа 3 -->
+            <div class="program-card">
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="program-title">Полная трансформация</h3>
+                <div class="program-duration">30 дней</div>
+                <p class="program-description">
+                    Глубокая работа над всеми аспектами жизни
+                </p>
+                <ul class="program-features">
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        Персональный план
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        Коучинг
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-dot"></span>
+                        Доступ к сообществу
+                    </li>
+                </ul>
+                <button class="program-button">Начать программу</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+        </section>
+        <!-- Преимущества -->
+        <section id="features" class="fade-in">
+            <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhanaMind - Преимущества</title>
+    <style>
+        .features-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .section-title {
+            color: #2B4B8C;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 40px 30px;
+            background: white;
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #2B4B8C, #1CA4B8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        .feature-title {
+            color: #2B4B8C;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .feature-description {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+            background: #F8F9FA;
+            border-radius: 16px;
+        }
+
+        .stat-number {
+            color: #2B4B8C;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 16px;
+        }
+
+        @media (max-width: 1024px) {
+            .features-grid,
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .features-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="py-4 px-8 fixed w-full top-0 shadow z-50 bg-primary text-white">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="logo flex items-center gap-4">
+            <svg width="40" height="40" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#2B4B8C"/>
+                        <stop offset="100%" stop-color="#1CA4B8"/>
+                    </linearGradient>
+                </defs>
+                <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="logo-text font-bold text-lg">ZhanaMind</span>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="index.html" class="hover:underline">Главная</a>
+            <a href="about-us.html" class="hover:underline">О нас</a>
+            <a href="courses.html" class="hover:underline">Курсы</a>
+            <a href="faq.html" class="hover:underline">FAQ</a>
+            <a href="contacts.html" class="hover:underline">Контакты</a>
+            <a href="subscription.html" class="hover:underline">Подписка</a>
+        </div>
+    </div>
+</nav>
+
+    <section class="features-section">
+        <div class="container">
+            <!-- Заголовок секции -->
+            <div class="section-header">
+                <h2 class="section-title">Почему выбирают ZhanaMind</h2>
+                <p class="section-description">
+                    Наш подход основан на научных исследованиях и проверенных методиках, 
+                    которые помогут вам достичь желаемых результатов
+                </p>
+            </div>
+
+            <!-- Сетка преимуществ -->
+            <div class="features-grid">
+                <!-- Преимущество 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Научный подход</h3>
+                    <p class="feature-description">
+                        Методики, основанные на исследованиях нейропластичности и когнитивной психологии
+                    </p>
+                </div>
+
+                <!-- Преимущество 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Эффективность</h3>
+                    <p class="feature-description">
+                        87% участников отмечают значительные улучшения уже через неделю практики
+                    </p>
+                </div>
+
+                <!-- Преимущество 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Сообщество</h3>
+                    <p class="feature-description">
+                        Поддержка единомышленников и обмен опытом в закрытом сообществе
+                    </p>
+                </div>
+
+                <!-- Преимущество 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">База знаний</h3>
+                    <p class="feature-description">
+                        Доступ к обширной библиотеке практик и упражнений
+                    </p>
+                </div>
+            </div>
+
+            <!-- Статистика -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Активных пользователей</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">87%</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Практик и упражнений</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Экспертов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+        </section>
+        <!-- Отзывы -->
+        <section id="testimonials" class="fade-in">
+            <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhanaMind - Отзывы</title>
+    <style>
+        .testimonials-section {
+            padding: 100px 0;
+            background: #F8F9FA;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .section-title {
+            color: #2B4B8C;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 16px;
+            background: linear-gradient(135deg, #2B4B8C, #1CA4B8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .testimonial-info h3 {
+            color: #2B4B8C;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 4px 0;
+        }
+
+        .testimonial-info p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .testimonial-quote {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 4px;
+        }
+
+        .star {
+            color: #FFD700;
+        }
+
+        .success-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-number {
+            color: #2B4B8C;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .quote-icon {
+            color: #1CA4B8;
+            opacity: 0.1;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid,
+            .success-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="py-4 px-8 fixed w-full top-0 shadow z-50 bg-primary text-white">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="logo flex items-center gap-4">
+            <svg width="40" height="40" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#2B4B8C"/>
+                        <stop offset="100%" stop-color="#1CA4B8"/>
+                    </linearGradient>
+                </defs>
+                <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="logo-text font-bold text-lg">ZhanaMind</span>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="index.html" class="hover:underline">Главная</a>
+            <a href="about-us.html" class="hover:underline">О нас</a>
+            <a href="courses.html" class="hover:underline">Курсы</a>
+            <a href="faq.html" class="hover:underline">FAQ</a>
+            <a href="contacts.html" class="hover:underline">Контакты</a>
+            <a href="subscription.html" class="hover:underline">Подписка</a>
+        </div>
+    </div>
+</nav>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <!-- Заголовок секции -->
+            <div class="section-header">
+                <h2 class="section-title">Истории успеха</h2>
+                <p class="section-description">
+                    Узнайте, как ZhanaMind помогает людям трансформировать свою жизнь 
+                    и достигать новых высот
+                </p>
+            </div>
+
+            <!-- Сетка отзывов -->
+            <div class="testimonials-grid">
+                <!-- Отзыв 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">М</div>
+                        <div class="testimonial-info">
+                            <h3>Мария П.</h3>
+                            <p>21 день с ZhanaMind</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">
+                        "Программа помогла мне обрести внутреннее спокойствие и научиться 
+                        управлять стрессом. Теперь каждое утро начинается с медитации, 
+                        и я чувствую себя намного лучше!"
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">А</div>
+                        <div class="testimonial-info">
+                            <h3>Александр К.</h3>
+                            <p>30 дней с ZhanaMind</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">
+                        "За месяц я смог полностью пересмотреть свои привычки и образ жизни. 
+                        Практики осознанности помогли мне стать более продуктивным и 
+                        сфокусированным."
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">Е</div>
+                        <div class="testimonial-info">
+                            <h3>Елена М.</h3>
+                            <p>7 дней с ZhanaMind</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">
+                        "Даже недельная программа дала мне инструменты для работы со стрессом. 
+                        Практики простые, но эффективные. Планирую продолжить обучение!"
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статистика успеха -->
+            <div class="success-stats">
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">пользователей отмечают снижение уровня стресса</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">87%</div>
+                    <div class="stat-label">улучшили качество сна после прохождения курса</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">рекомендуют ZhanaMind своим друзьям</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+        </section>
+        <!-- FAQ -->
+        <section id="faq" class="fade-in">
+            <h2 class="text-4xl font-bold text-center mb-8">Часто задаваемые вопросы</h2>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <h3>Что такое ZhanaMind?</h3>
+                <p>Это программа трансформации на основе нейронауки.</p>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <h3>Какие результаты я могу ожидать?</h3>
+                <p>Улучшение осознанности, эмоционального интеллекта и продуктивности.</p>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <h3>Как долго длится программа?</h3>
+                <p>Длительность зависит от выбранной программы: 7, 21 или 30 дней.</p>
+            </div>
+        </section>
+    </main>
+    <!-- Футер -->
+    <footer id="footer" class="py-8 fade-in">
+        <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhanaMind - Footer</title>
+    <style>
+        .footer {
+            background: #1A1A1A;
+            color: #FFFFFF;
+            padding: 80px 0 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .brand-description {
+            color: #999;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 24px;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .contact-info {
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            color: #666;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .footer-bottom-link {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-link:hover {
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+                text-align: center;
+                max-width: none;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-column {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="py-4 px-8 fixed w-full top-0 shadow z-50 bg-primary text-white">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="logo flex items-center gap-4">
+            <svg width="40" height="40" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#2B4B8C"/>
+                        <stop offset="100%" stop-color="#1CA4B8"/>
+                    </linearGradient>
+                </defs>
+                <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="logo-text font-bold text-lg">ZhanaMind</span>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="index.html" class="hover:underline">Главная</a>
+            <a href="about-us.html" class="hover:underline">О нас</a>
+            <a href="courses.html" class="hover:underline">Курсы</a>
+            <a href="faq.html" class="hover:underline">FAQ</a>
+            <a href="contacts.html" class="hover:underline">Контакты</a>
+            <a href="subscription.html" class="hover:underline">Подписка</a>
+        </div>
+    </div>
+</nav>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Бренд -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#2B4B8C"/>
+                                    <stop offset="100%" stop-color="#1CA4B8"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" 
+                                  fill="url(#logoGradient)"/>
+                            <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" 
+                                  stroke="white" stroke-width="3" fill="none"/>
+                        </svg>
+                        <span class="logo-text">ZhanaMind</span>
+                    </div>
+                    <p class="brand-description">
+                        Научный подход к личностному развитию. 
+                        Медитации, практики осознанности и работа с эмоциями.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Программы -->
+                <div class="footer-column">
+                    <h3>Программы</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">7 дней</a></li>
+                        <li><a href="#">21 день</a></li>
+                        <li><a href="#">30 дней</a></li>
+                        <li><a href="#">Индивидуальные программы</a></li>
+                    </ul>
+                </div>
+
+                <!-- Компания -->
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Карьера</a></li>
+                    </ul>
+                </div>
+
+                <!-- Контакты -->
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p class="contact-info">Email: info@zhanamind.com</p>
+                    <p class="contact-info">Тел: +7 (999) 123-45-67</p>
+                    <ul class="footer-links">
+                        <li><a href="#">Поддержка</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Нижняя часть футера -->
+            <div class="footer-bottom">
+                <p>© 2024 ZhanaMind. Все права защищены.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-bottom-link">Условия использования</a>
+                    <a href="#" class="footer-bottom-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer-bottom-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    </footer>
+    <script>
+        function toggleFAQ(item) {
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

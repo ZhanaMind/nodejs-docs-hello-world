@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подписка на рассылку - ZhanaMind</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2B4B8C;
+            --secondary: #1CA4B8;
+            --accent: #34785B;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f8f8f8;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .subscription-section {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .subscription-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .subscription-section p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .subscription-section input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .subscription-section button {
+            background: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .subscription-section button:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="py-4 px-8 fixed w-full top-0 shadow z-50 bg-primary text-white">
+    <div class="flex justify-between items-center container mx-auto">
+        <div class="logo flex items-center gap-4">
+            <svg width="40" height="40" viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#2B4B8C"/>
+                        <stop offset="100%" stop-color="#1CA4B8"/>
+                    </linearGradient>
+                </defs>
+                <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" fill="url(#logoGradient)"/>
+                <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="logo-text font-bold text-lg">ZhanaMind</span>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="index.html" class="hover:underline">Главная</a>
+            <a href="about-us.html" class="hover:underline">О нас</a>
+            <a href="courses.html" class="hover:underline">Курсы</a>
+            <a href="faq.html" class="hover:underline">FAQ</a>
+            <a href="contacts.html" class="hover:underline">Контакты</a>
+            <a href="subscription.html" class="hover:underline">Подписка</a>
+        </div>
+    </div>
+</nav>
+
+    <header>
+        <h1 class="text-5xl font-bold mb-4">Подписка на рассылку</h1>
+        <p class="text-xl">Получайте полезные советы и обновления от ZhanaMind.</p>
+    </header>
+    <main>
+        <!-- Subscription Form -->
+        <section class="subscription-section">
+            <h2>Подпишитесь на рассылку</h2>
+            <p>Введите свой email, чтобы не пропустить важные обновления и эксклюзивные материалы.</p>
+            <form>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 ZhanaMind. Все права защищены.</p>
+    </footer>
+</body>
+</html>
