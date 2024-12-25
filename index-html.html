@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZhanaMind - Наука перемен</title>
+    <!-- Подключаем Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Градиенты и дополнительные стили */
+        .gradient-primary {
+            background: linear-gradient(to right, #2B4B8C, #1CA4B8);
+        }
+        .gradient-hover:hover {
+            background: linear-gradient(to right, #1CA4B8, #2B4B8C);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #2B4B8C, #1CA4B8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Логотип -->
+                <div class="flex items-center space-x-2">
+                    <svg width="40" height="40" viewBox="0 0 200 200">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#2B4B8C"/>
+                                <stop offset="100%" stop-color="#1CA4B8"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M100,20 Q160,20 160,80 Q160,140 100,140 Q40,140 40,80 Q40,20 100,20" 
+                              fill="url(#logoGradient)"/>
+                        <path d="M70,60 Q100,40 130,60 Q150,80 130,100 Q100,120 70,100 Q50,80 70,60" 
+                              stroke="white" stroke-width="3" fill="none"/>
+                    </svg>
+                    <span class="text-2xl font-bold text-[#2B4B8C]">ZhanaMind</span>
+                </div>
+
+                <!-- Навигационные ссылки -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-[#2B4B8C] transition-colors">Программы</a>
+                    <a href="#" class="text-gray-600 hover:text-[#2B4B8C] transition-colors">О нас</a>
+                    <a href="#" class="text-gray-600 hover:text-[#2B4B8C] transition-colors">Блог</a>
+                    <button class="px-6 py-2 bg-[#2B4B8C] text-white rounded-lg hover:bg-[#1CA4B8] transition-colors">
+                        Начать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Текстовый контент -->
+                <div>
+                    <h1 class="text-5xl font-bold text-[#2B4B8C] mb-6">
+                        Трансформация мышления начинается здесь
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Научно обоснованные методики для развития осознанности, 
+                        эмоционального интеллекта и достижения внутренней гармонии
+                    </p>
+                    <button class="px-8 py-4 bg-[#2B4B8C] text-white rounded-lg hover:bg-[#1CA4B8] transition-colors text-lg">
+                        Попробовать бесплатно
+                    </button>
+                </div>
+                <!-- Изображение/Видео -->
+                <div class="bg-gradient-to-br from-[#2B4B8C] to-[#1CA4B8] rounded-2xl p-8">
+                    <div class="aspect-video bg-white/10 rounded-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Программы -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="text-3xl font-bold text-[#2B4B8C] mb-12 text-center">
+                Наши программы
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Программа 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-[#2B4B8C] mb-4">7 дней</h3>
+                    <p class="text-gray-600 mb-4">Быстрый старт к осознанной жизни</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            5 медитаций
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            Дневник благодарности
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            Чек-листы
+                        </li>
+                    </ul>
+                    <button class="w-full bg-[#2B4B8C] text-white rounded-lg py-2 hover:bg-[#1CA4B8] transition-colors">
+                        Подробнее
+                    </button>
+                </div>
+
+                <!-- Программа 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-[#2B4B8C] mb-4">21 день</h3>
+                    <p class="text-gray-600 mb-4">Формирование новых привычек</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            15 практик
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            Групповые занятия
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            Поддержка куратора
+                        </li>
+                    </ul>
+                    <button class="w-full bg-[#2B4B8C] text-white rounded-lg py-2 hover:bg-[#1CA4B8] transition-colors">
+                        Подробнее
+                    </button>
+                </div>
+
+                <!-- Программа 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-[#2B4B8C] mb-4">30 дней</h3>
+                    <p class="text-gray-600 mb-4">Глубокая трансформация</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            Персональный план
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            Коучинг
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-2 h-2 bg-[#1CA4B8] rounded-full mr-2"></span>
+                            Доступ к сообществу
+                        </li>
+                    </ul>
+                    <button class="w-full bg-[#2B4B8C] text-white rounded-lg py-2 hover:bg-[#1CA4B8] transition-colors">
+                        Подробнее
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="text-3xl font-bold text-[#2B4B8C] mb-12 text-center">
+                Истории успеха
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Отзыв 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-[#2B4B8C]"></div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-[#2B4B8C]">Мария П.</h3>
+                            <p class="text-gray-600 text-sm">21 день с ZhanaMind</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Программа помогла мне обрести внутреннее спокойствие и научиться 
+                        управлять стрессом. Теперь каждое утро начинается с медитации!"
+                    </p>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-[#1CA4B8]"></div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-[#2B4B8C]">Александр К.</h3>
+                            <p class="text-gray-600 text-sm">30 дней с ZhanaMind</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "За месяц я смог полностью пересмотреть свои привычки и образ жизни. 
+                        Результаты превзошли все ожидания!"
+                    </p>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-[#34785B]"></div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-[#2B4B8C]">Елена М.</h3>
+                            <p class="text-gray-600 text-sm">7 дней с ZhanaMind</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Даже недельная программа дала мне инструменты для работы со стрессом. 
+                        Планирую продолжить обучение!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-[#2B4B8C] to-[#1CA4B8] text-white">
+        <div class="container mx-auto max-w-4xl px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">
+                Начните свой путь к осознанной жизни
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Присоединяйтесь к тысячам людей, которые уже изменили свою жизнь с ZhanaMind
+            </p>
+            <button class="px-8 py-4 bg-white text-[#2B4B8C] rounded-lg hover:bg-gray-100 transition-colors text-lg">
+                Начать бесплатно
+            </button>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Логотип и описание -->
+                <div>
+                    <div class="flex items-center space-x-2 text-white mb-4">
+                        <svg width="30" height="30" viewBox="0 0 200 200">
+                            <use href="#logo" fill="url(#logoGradient)" />
+                        </svg>
+                        <span class="text-xl font-bold">ZhanaMind</span>
+                    </div>
+                    <p>Наука перемен</p>
+                </div>
+
+                <!-- Программы -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Программы</h4>
+                    <ul class="space-y-2">
+                        <li
