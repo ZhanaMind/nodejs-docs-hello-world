@@ -1,0 +1,23 @@
+import os
+import shutil
+
+# Define paths
+output_dir = '/mnt/data/ZhanaMind_Project'
+html_file_path = '/mnt/data/ZhanaMind_website.html'
+zip_file_path = '/mnt/data/ZhanaMind_Project.zip'
+
+# Create the project directory structure
+os.makedirs(output_dir, exist_ok=True)
+assets_dir = os.path.join(output_dir, "assets")
+os.makedirs(assets_dir, exist_ok=True)
+
+# Move the HTML file to be the index file in the project directory
+shutil.copy(html_file_path, os.path.join(output_dir, "index.html"))
+
+# Add additional assets (if provided, currently just preparing structure)
+# No additional assets were specified or uploaded, leaving assets directory empty
+
+# Create a ZIP archive of the project
+shutil.make_archive(output_dir, 'zip', output_dir)
+
+zip_file_path
